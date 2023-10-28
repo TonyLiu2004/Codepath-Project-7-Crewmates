@@ -51,6 +51,7 @@ function App() {
     <div className="App">
 
       <div className="header">
+        <Link to="/"><button className = "header-button">Home</button></Link>
         <Link to="/gallery"><button className="header-button"> Gallery </button></Link>
         <Link to="/create"><button className="header-button"> Create </button></Link>
       </div>

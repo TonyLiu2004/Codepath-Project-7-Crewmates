@@ -33,7 +33,7 @@ const EditCard = ({data}) => {
         }else{
             alert("Successfully updated crewmate!");
         }
-        
+
         if (error) {
             console.log(error);
         }
@@ -65,10 +65,17 @@ const EditCard = ({data}) => {
 
                 <label>Color</label><br />
                 <select id="color" name="color" value={card.color} onChange={handleChange}>
-                    <option value="red">Red</option>
-                    <option value="blue">Blue</option>
-                    <option value="green">Green</option>
-                    <option value="yellow">Yellow</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                    <option value = "Pink">Pink</option>
+                    <option value = "Orange">Orange</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value = "Black">Black</option>
+                    <option value = "White">White</option>
+                    <option value = "Purple">Purple</option>
+                    <option value = "Brown">Brown</option>
+                    <option value = "Cyan">Cyan</option>
                 </select><br/>
                 <input type="submit" value="Update Crewmate" onClick={updateCard}/>
                 <button className="deleteButton" onClick={deleteCrewmate}>Delete Crewmate</button>
