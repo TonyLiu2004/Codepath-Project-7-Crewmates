@@ -9,36 +9,37 @@ import ReadCard from './assets/pages/ReadCard'
 import Home from './assets/pages/Home.jsx'
 
 function App() {
-  const [posts, setPosts] = useState([]);
+  const [cards, setCards] = useState([]);
   useEffect(() => {
     
     // read all post from table
-    const fetchPosts = async () => {
+    const fetchCards = async () => {
       const {data} = await supabase
       .from('crewmates')
       .select()
       .order('created_at', { ascending: true })
 
       // set state of posts
-      setPosts(data)
+      setCards(data)
 
     }
 
-    fetchPosts()
+    fetchCards()
 
   }, []);
+
   let element = useRoutes([
     {
       path:"/",
-      element:<Home></Home>
+      element:<Home/>
     },
     {
       path: "/gallery",
-      element:<ReadCard data={posts}/>
+      element:<ReadCard data={cards}/>
     },
     {
-      path:"/edit/:id",
-      element: <EditCard data={posts} />
+      path:"/gallery/edit/:id",
+      element: <EditCard data={cards} />
     },
     {
       path:"/create",
