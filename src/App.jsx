@@ -6,6 +6,7 @@ import { supabase } from './client'
 import CreateCard from './assets/pages/CreateCard'
 import EditCard from './assets/pages/EditCard'
 import ReadCard from './assets/pages/ReadCard'
+import Home from './assets/pages/Home.jsx'
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -28,7 +29,11 @@ function App() {
   }, []);
   let element = useRoutes([
     {
-      path: "/",
+      path:"/",
+      element:<Home></Home>
+    },
+    {
+      path: "/gallery",
       element:<ReadCard data={posts}/>
     },
     {
@@ -45,8 +50,7 @@ function App() {
     <div className="App">
 
       <div className="header">
-        <h1>Crewmates!</h1>
-        <Link to="/"><button className="header-button"> Gallery </button></Link>
+        <Link to="/gallery"><button className="header-button"> Gallery </button></Link>
         <Link to="/create"><button className="header-button"> Create </button></Link>
       </div>
         {element}
