@@ -28,12 +28,6 @@ const EditCard = ({data}) => {
         .update({ name: card.name, speed: card.speed,  color: card.color})
         .eq('id', id)
 
-        if(typeof card.speed !== 'number'){
-            alert("Crewmate was not updated, speed must be a number.");
-        }else{
-            alert("Successfully updated crewmate!");
-        }
-
         if (error) {
             console.log(error);
         }
@@ -60,7 +54,7 @@ const EditCard = ({data}) => {
                 <br/>
 
                 <label>Speed</label><br />
-                <input type="text" id="speed" name="speed" value={card.speed} onChange={handleChange}/><br />
+                <input type="number" id="speed" name="speed" value={card.speed} onChange={handleChange}/><br />
                 <br/>
 
                 <label>Color</label><br />

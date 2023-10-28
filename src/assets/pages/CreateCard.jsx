@@ -37,7 +37,7 @@ const CreateCard = () => {
                 <br/>
 
                 <label >Speed</label><br />
-                <input type="text" id="speed" name="speed" value ={card.speed} onChange={handleChange}/><br />
+                <input type="number" id="speed" name="speed" value ={card.speed} onChange={handleChange}/><br />
                 <br/>
 
                 <label >Color</label><br />
