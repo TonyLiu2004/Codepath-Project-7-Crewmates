@@ -1,10 +1,36 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import './Card.css'
-import pic from './crewmatePic.png'
+import pic1 from './crewmatePic.png'
+import red from './red.png'
+import blue from './blue.png'
+import green from './green.png'
+import pink from './pink.png'
+import orange from './orange.png'
+import yellow from './yellow.png'
+import black from './black.png'
+import white from './white.png'
+import purple from './purple.png'
+import brown from './brown.png'
 
 const Card = (props) => {
-
+    const [pic,setPic] = useState(pic1);
+    console.log(props.color);
+    useEffect(() => {
+        const getColor = () => {
+            if(props.color == "Red") setPic(red);   
+            if(props.color == "Blue") setPic(blue);
+            if(props.color == "Green") setPic(green);
+            if(props.color == "Pink") setPic(pink);
+            if(props.color == "Orange") setPic(orange);
+            if(props.color == "Yellow") setPic(yellow);
+            if(props.color == "Black") setPic(black);
+            if(props.color == "White") setPic(white);
+            if(props.color == "Purple") setPic(purple);
+            if(props.color == "Brown") setPic(brown);
+        }
+        getColor() 
+      }, []);
     return (
         <div className="Card">
             <div className = "container">

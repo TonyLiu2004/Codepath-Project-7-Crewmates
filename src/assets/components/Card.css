@@ -1,7 +1,7 @@
 
 .Card {
     backdrop-filter: blur(2px);
-    border: 1px solid rgba(153, 153, 153, 0.497);
+    border: 1px solid rgba(187, 187, 187, 0.497);
     border-radius: 20px;
     padding-top: 10px;
     padding-bottom: 20px;
@@ -9,6 +9,7 @@
     margin-bottom: 25px;
     width: 370px;
     margin-right: 20px;
+    background-color: rgba(100, 100, 100, 0.5);
 }
 
 h3{
