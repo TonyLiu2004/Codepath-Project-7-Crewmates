@@ -7,6 +7,7 @@ import CreateCard from './assets/pages/CreateCard'
 import EditCard from './assets/pages/EditCard'
 import ReadCard from './assets/pages/ReadCard'
 import Home from './assets/pages/Home.jsx'
+import Info from './assets/pages/info'
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -38,12 +39,16 @@ function App() {
       element:<ReadCard data={cards}/>
     },
     {
-      path:"/gallery/edit/:id",
+      path:"/edit/:id",
       element: <EditCard data={cards} />
     },
     {
       path:"/create",
       element: <CreateCard />
+    },
+    {
+      path:"info/:id",
+      element: <Info data = {cards}/>
     }
   ]);
   return (

@@ -3,7 +3,7 @@ import { supabase } from '../../client.jsx';
 import { useParams } from 'react-router-dom';
 
 const EditCard = ({data}) => {
-        const {id} = useParams();
+    const {id} = useParams();
     const [card, setCard] = useState({id: null, name: "", speed: "", color: ""});
 
     useEffect(() => {

@@ -15,7 +15,6 @@ import brown from './brown.png'
 
 const Card = (props) => {
     const [pic,setPic] = useState(pic1);
-    console.log(props.color);
     useEffect(() => {
         const getColor = () => {
             if(props.color == "Red") setPic(red);   
@@ -33,6 +32,11 @@ const Card = (props) => {
       }, []);
     return (
         <div className="Card">
+            <Link
+                to={`/info/${props.id}`}
+                key={props.id}
+                state={{ pic }}
+                >
             <div className = "container">
                 <div>
                     <h3 className="name">Name: {props.name}</h3>
@@ -43,7 +47,8 @@ const Card = (props) => {
                     <img className = "crewmatePic" src ={pic} alt="Crewmate"></img>
                 </div>
             </div>
-            <Link className = "link" to={'edit/'+ props.id}>Edit Crewmate</Link>
+            <Link className = "link" to={`/edit/${props.id}`}>Edit Crewmate</Link>
+            </Link>
         </div>
     );
 };

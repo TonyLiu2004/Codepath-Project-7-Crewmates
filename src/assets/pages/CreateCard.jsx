@@ -27,7 +27,7 @@ const CreateCard = () => {
             console.log(error);
         }
 
-        window.location = "/";
+        window.location = "/create";
 
     }
     return(
