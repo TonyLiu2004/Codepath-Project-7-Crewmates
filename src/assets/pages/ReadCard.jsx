@@ -14,7 +14,7 @@ const ReadCard = (props) =>{
             <div className="readCards">
                 {
                     posts && posts.length > 0 ?
-                        posts.map((post) => (
+                        posts.slice().reverse().map((post) => (
                             <Card id={post.id} name={post.name} speed={post.speed} color={post.color} />
                         ))
                     : <h2>{'No Crewmates Yet 😞'}</h2>
